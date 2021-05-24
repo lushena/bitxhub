@@ -3,8 +3,8 @@
 set -e
 
 CURRENT_PATH=$(pwd)
-PIER_VERSION=v1.0.0-rc1
-PIER_CLIENT_FABRIC_VERSION=v1.0.0-rc1
+PIER_VERSION=v1.5.0
+PIER_CLIENT_FABRIC_VERSION=v1.5.0
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
@@ -112,7 +112,7 @@ function start() {
 
   pier --repo="${PIER_ROOT}" init
   mkdir -p "${PIER_ROOT}"/plugins
-  cp "${CURRENT_PATH}"/pier-client-fabric/build/fabric-client-1.4.so "${PIER_ROOT}"/plugins/
+  cp "${CURRENT_PATH}"/pier-client-fabric/build/fabric-client-1.4 "${PIER_ROOT}"/plugins/appChain_plugin
   cp -rf "${CURRENT_PATH}"/pier-client-fabric/config "${PIER_ROOT}"/fabric
   rm -rf "${PIER_ROOT}"/fabric/crypto-config
   cp -rf "${CRYPTO_CONFIG}" "${PIER_ROOT}"/fabric/crypto-config
