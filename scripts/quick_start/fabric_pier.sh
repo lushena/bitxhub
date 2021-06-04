@@ -112,7 +112,7 @@ function start() {
 
   pier --repo="${PIER_ROOT}" init
   mkdir -p "${PIER_ROOT}"/plugins
-  cp "${CURRENT_PATH}"/pier-client-fabric/build/fabric-client-1.4 "${PIER_ROOT}"/plugins/appChain_plugin
+  cp "${CURRENT_PATH}"/pier-client-fabric/build/fabric-client-1.4 "${PIER_ROOT}"/plugins/appchain_plugin
   cp -rf "${CURRENT_PATH}"/pier-client-fabric/config "${PIER_ROOT}"/fabric
   rm -rf "${PIER_ROOT}"/fabric/crypto-config
   cp -rf "${CRYPTO_CONFIG}" "${PIER_ROOT}"/fabric/crypto-config
